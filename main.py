@@ -5,7 +5,7 @@ import cx_Oracle
 def main():
     try:
         print(f'The current install client version software: {cx_Oracle.clientversion()}')
-        connection = cx_Oracle.connect("sys", "ora123a", "STRPT", mode=cx_Oracle.SYSDBA, encoding="UTF-8")
+        connection = cx_Oracle.connect("sys", "password", "STRPT", mode=cx_Oracle.SYSDBA, encoding="UTF-8")
         #print(f'Current connection client DB version software: {str(connection.version())}')
         cur = connection.cursor()
         outvar =cur.var(int)
